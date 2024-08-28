@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line-bg: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --outfit: "Outfit", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+main {
+  width: 405px;
+  max-width: 90%;
+  background-color: var(--card-bg);
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.image {
+  position: relative;
+}
+
+
+.image div{
+  position:absolute;
+  top: 0;
+  background-color: hsl(178, 100%, 50%, 60%);
+  width: 100%;
+  height: calc(100% - 4px);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image div:hover{
+  opacity: 1;
+  cursor: pointer;
+  /* width:20%; */
+
+}
+.Equilibrium h2 {
+  font-size: 24px;
+  font-family: var(--outfit);
+  color: var(--white);
+  font-weight: 600;
+  margin-top: 20px;
+}
+.Equilibrium h2:hover {
+  color: var(--cyan);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.Equilibrium p {
+  font-size: 18px;
+  color: var(--Soft-blue);
+  opacity: 0.7;
+  font-family: var(--outfit);
+  margin-top: 10px;
+}
+
+.icon-ethereum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1.5px solid var(--line-bg);
+  padding-bottom: 35px;
+}
+
+.eth {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.eth img {
+  width: 15px;
+  height: 10%;
+}
+
+.eth h4 {
+  font-size: 18px;
+  color: var(--cyan);
+  font-family: var(--outfit);
+  font-weight: 400;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.clock img {
+  width: 25px;
+  height: 10%;
+}
+
+.clock h4 {
+  font-size: 18px;
+  color: var(--Soft-blue);
+  font-family: var(--outfit);
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.avatar {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 30px;
+}
+
+.avatar img {
+  width: 40px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.avatar h4 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--Soft-blue);
+}
+
+.avatar h4 span {
+  color: var(--white);
+  font-family: var(--outfit);
+}
+.avatar h4 span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+@media screen and (max-width: 425px) {
+  .eth h4{
+    font-size: 14px;
+  }
+
+  .eth img{
+    width:14px;
+  }
+  .clock h4{
+    font-size:14px;
+  }
+  .avatar img{
+   width :30px;
+}
+.avatar h4{
+  font-size:14px;
+}
+}
